@@ -1,33 +1,58 @@
-import { useState } from 'react'
+// UI mein cheeze update karne ke liye we need hooks in react and unn hooks ke thorugh hi data update hoga  
+
+import { useState } from 'react' // importing of hooks
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Using of useState hook --> The React useState hook allows us to track state in a function component. State generally refers to data or properties that need to be tracking in an application.
+
+  const [counter, setCounter] = useState(0); //yaha counter mein default value 5 hogi joki humne useState() mein di hai, we can give any default value in useState()
+
+  // let counter = 5;
+  // const h2 = document.querySelector('h2');
+
+  const addValue = () => {
+
+    // Check where counter value not more than 20 is shown on browser
+    if (counter <= 19) {
+      // setCounter(counter - 1);
+
+      //setCounter mein ek callback function milta ha
+      setCounter((prevCounter) => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
+      // setCounter((prevCounter) => prevCounter + 1);
+      // setCounter((prevCounter) => prevCounter + 1);
+      // setCounter((prevCounter) => prevCounter + 1);
+      // setCounter((prevCounter) => prevCounter + 1);
+
+      // This is an interview question of react in which interviewer asks about setCounter and useState working by replicating setCounter function so many times and counter updation on clicking button
+    }
+  }
+
+  const decreaseValue = () => {
+    // Check where negative value of counter is not shown on browser
+    if (counter >= 1) {
+      // setCounter(counter - 1);
+      
+      setCounter((prevCounter) => prevCounter - 1);
+      setCounter((prevCounter) => prevCounter - 1);
+      // setCounter((prevCounter) => prevCounter - 1);
+      // setCounter((prevCounter) => prevCounter - 1);
+    }
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Chai with React</h1>
+      <h2>Counter value : {counter}</h2>
+
+      <button
+        onClick={addValue}
+      >Add value : {counter}</button>
+      <br />
+      <button onClick={decreaseValue} style={{marginTop : "20px"}}>Remove value : {counter}</button>
     </>
   )
 }
