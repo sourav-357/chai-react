@@ -20,12 +20,12 @@ function App() {
       // setCounter(counter - 1);
 
       //setCounter mein ek callback function milta ha
-      setCounter((prevCounter) => prevCounter + 1);
-      setCounter((prevCounter) => prevCounter + 1);
-      // setCounter((prevCounter) => prevCounter + 1);
-      // setCounter((prevCounter) => prevCounter + 1);
-      // setCounter((prevCounter) => prevCounter + 1);
-      // setCounter((prevCounter) => prevCounter + 1);
+      setCounter((counter) => counter + 1);
+      setCounter((counter) => counter + 1);
+      // setCounter((counter) => counter + 1);
+      // setCounter((counter) => counter + 1);
+      // setCounter((counter) => counter + 1);
+      // setCounter((counter) => counter + 1);
 
       // This is an interview question of react in which interviewer asks about setCounter and useState working by replicating setCounter function so many times and counter updation on clicking button
     }
@@ -36,10 +36,10 @@ function App() {
     if (counter >= 1) {
       // setCounter(counter - 1);
       
-      setCounter((prevCounter) => prevCounter - 1);
-      setCounter((prevCounter) => prevCounter - 1);
-      // setCounter((prevCounter) => prevCounter - 1);
-      // setCounter((prevCounter) => prevCounter - 1);
+      setCounter((counter) => counter - 1);
+      setCounter((counter) => counter - 1);
+      // setCounter((counter) => counter - 1);
+      // setCounter((counter) => counter - 1);
     }
   }
 
